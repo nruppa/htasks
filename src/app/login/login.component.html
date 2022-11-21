@@ -1,0 +1,15 @@
+<p-card>
+    <p>Login</p>
+        <p-card>
+            <form [formGroup]="myform">
+            <label for="username">UserName:</label>
+            <input type="text" formControlName="username" placeholder="username" pInputText><br><br>
+            <label for="password">Password:</label>
+            <input type="password" formControlName="password" placeholder="password" pInputText><br><br>
+            <button routerLink="/date" pButton (click)="signin(myform.value)">SignIn</button>
+        </form>
+        </p-card>
+</p-card>
+
+
+<!-- <i class=" pi-eye ,pi pi-check" style="font-size: 2rem"></i> -->

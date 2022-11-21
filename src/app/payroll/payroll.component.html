@@ -1,0 +1,13 @@
+<p>payroll works!</p>
+<p-card>
+   <button pButton>payroll</button>
+   <div class="field col-12 md:col-4">
+    <label for="yearpicker">Year Picker</label>
+    <p-calendar [(ngModel)]="date" view="year" dateFormat="yy" inputId="yearpicker"></p-calendar>
+</div>
+<div class="field col-12 md:col-4">
+    <label for="monthpicker">Month Picker</label>
+    <p-calendar [(ngModel)]="date1" view="month" dateFormat="mm/yy" [readonlyInput]="true" inputId="monthpicker"></p-calendar>
+</div>
+    <button pButton style="background-color: skyblue;" class="field col-5 md:col-2">Search</button>
+</p-card>

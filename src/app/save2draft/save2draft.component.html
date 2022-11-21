@@ -1,0 +1,42 @@
+<button pButton type="button" icon="pi pi-arrow-left" (click)="clickMe()"></button><br><br>
+
+<!-- <ng-content select=".myForm"></ng-content> -->
+<!-- <ng-content></ng-content> -->
+<form [formGroup]="form">
+    <p-card>
+        <div class="formgrid grid">
+            <h4>Category</h4>
+            &nbsp;&nbsp;
+            <div class="col" *ngFor="let weekDate of weekDates ;let i=index">
+                <label>{{weekDate | date }}</label><br>
+                <div style="color:Gray ;">{{days[i]}}</div><br>
+            </div>
+        </div>
+        <div class="formgrid grid">
+            <h4>Total (Hrs)</h4>
+            <div class="col" *ngFor="let weekDate of weekDates ;let i=index">
+                <p-inputNumber placeholder="0" formControlName="hours{{i}}"></p-inputNumber>
+            </div>
+        </div>
+        <div class="p-float-label">
+            <input type="text"  placeholder="Enter  notes related to your daily activity" formControlName="Notes" type="text" class="p-inputtext-sm w-full"  pInputText>
+            <label>NOTES</label>
+        </div>
+        <div class="col">
+            <button pButton type="button" style="position:relative;left: 1300px" (click)="submit(form.value)"
+                label="Submit" class="p-button-help">
+            </button>
+        </div>
+    </p-card>
+</form>
+<div>
+    <p-toast></p-toast>
+    <p-dialog [(visible)]="display">
+        <h4>Are you sure you want to submit the</h4>
+        <h4> timesheets for this week with "{{sum1}}" hrs</h4>
+        <button pButton type="button" style="position:relative;left:55px;" class="p-buuton-Danger"
+            routerLink="/demo">Cancel</button>
+        <button pButton type="button" style="position:relative;left: 65px;" (click)="Totalhrs()"
+            class="p-button-success" routerLink="/demo">Submit</button>
+    </p-dialog>
+</div>

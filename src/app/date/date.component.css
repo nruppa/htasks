@@ -1,0 +1,13 @@
+:host ::ng-deep .p-dialog {
+    text-align: center;
+}
+/* :host ::ng-deep{
+    text-align: center;
+    /* background-color: ; */
+:host::ng-deep .p-menu{
+background-color:antiquewhite;
+/* padding-bottom:400px; */
+}
+/* :host::ng-deep .p-toolbar{
+    background-color: aqua;
+} */

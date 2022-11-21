@@ -1,0 +1,51 @@
+<button pButton type="button" icon="pi pi-arrow-left" routerLink="/back"></button><br><br>
+
+<!-- <app-save2draft> -->
+<form class="myForm" [formGroup]="form">
+    <p-card>
+        <div class="grid">
+            <h4>Category</h4>
+            &nbsp;&nbsp;
+            <div class="col" *ngFor="let weekDate of weekDates ;let i=index">
+                <label>{{weekDate | date }}</label><br>
+                <div style="color:Gray ;">{{days[i]}}</div><br>
+            </div>
+        </div>
+        <div class="grid">
+            <h4>Total (Hrs)</h4>
+            <div class="col" *ngFor="let weekDate of weekDates ;let i=index">
+                <p-inputNumber placeholder="0" formControlName="hours{{i}}"></p-inputNumber>
+            </div>
+        </div>
+        <br>
+        <!-- <input placeholder="NOTES" formControlName="Notes" type="text" class="p-inputtext-sm w-full" pInputText> -->
+        <div class="p-float-label">
+            <input type="text" placeholder="Enter  notes related to your daily activity" formControlName="Notes"
+                type="text" class="p-inputtext-sm w-full" pInputText>
+            <label>NOTES</label>
+        </div>
+        <br>
+        <br>
+        <div class="formgrid grid">
+            <div class="field col">
+                <button pButton type="button" (click)="Draft(form.value)" label="Save as Draft"
+                    style="position:relative;left: 1100px" class="p-button-warning"></button>
+                <button pButton type="button" style="position:relative;left: 1200px" (click)="submit(form.value)"
+                    label="Submit" class="p-button-help">
+                </button>
+            </div>
+        </div>
+    </p-card>
+</form>
+<!-- </app-save2draft> -->
+<div>
+    <p-toast></p-toast>
+    <p-dialog [(visible)]="display">
+        <h4>Are you sure you want to submit the</h4>
+        <h4> timesheets for this week with "{{sum1}}" hrs</h4>
+        <button pButton type="button" style="position:relative;left:55px;" class="p-buuton-Danger"
+            routerLink="/back">Cancel</button>
+        <button pButton type="button" style="position:relative;left: 65px;" (click)="Totalhrs()"
+            class="p-button-success">Submit</button>
+    </p-dialog>
+</div>

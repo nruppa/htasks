@@ -1,0 +1,15 @@
+<div class="main" >
+    <button pButton type="button" (click)="show()"  label=Add></button>
+    <button pButton type="button" routerLink="save2draft" label=Draft></button>
+</div>
+<p-dialog header=" You are about to add time sheet for the week" [(visible)]="display"
+    [contentStyle]="{'overflow': 'visible'}" [formGroup]="calender">
+    <h5>({{firstday | date:'MMMM d, y'}} - {{lastday | date:'MMMM d, y'}})</h5>
+    <p>if you wish to change the date, click here <p-calendar [inputStyle]="{'width':'0px', 'display':'none'}"
+            formControlName="selecteddate" [maxDate]="dateTime" (onSelect)="fetchdate()" [showIcon]="true">
+            <i class="pi pi-calendar-plus"></i>
+    </p-calendar>
+    </p>
+    <button pButton (click)="Proceed()" routerLink="proceed">Proceed</button>
+</p-dialog>
+<router-outlet></router-outlet>

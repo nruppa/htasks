@@ -1,0 +1,12 @@
+:host ::ng-deep .p-card .p-card-body {
+    padding: 15.3rem;
+    background: gainsboro;
+    text-align: center;
+}
+:host ::ng-deep .p-card .p-card-content {
+    padding: 1.25rem 0;
+    background: aliceblue;
+}
+div.p-card{
+    width: 3504px;
+}
