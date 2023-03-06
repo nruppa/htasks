@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { DateComponent } from './date/date.component';
 import { DemoComponent } from './demo/demo.component';
 import { GuardGuard } from './guard.guard';
+import { InternalProjectComponent } from './internal-project/internal-project.component';
 import { LoginComponent } from './login/login.component';
 import { ProceedGuard } from './proceed.guard';
 import { ProceedComponent } from './proceed/proceed.component';
@@ -41,6 +42,9 @@ const routes: Routes = [
   },
   {
     path: 'back', component: DateComponent
+  },
+  {
+    path: 'internal', component: InternalProjectComponent
   },
 
 

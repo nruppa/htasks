@@ -1,0 +1,108 @@
+<!-- <form [formGroup]="form">
+  <div class="grid">
+    <h4>Category</h4>
+    &nbsp;&nbsp;
+    <p-inputNumber placeholder="0" formControlName="h1" (change)="changes($event)"></p-inputNumber><br>
+    <p-inputNumber placeholder="0" formControlName="h2" (change)="changes($event)"></p-inputNumber><br>
+    <p-inputNumber placeholder="0" formControlName="h3" (change)="changes($event)"></p-inputNumber><br>
+    <p-inputNumber placeholder="0" formControlName="h4" (change)="changes($event)"></p-inputNumber><br>
+  </div>
+  <p-button placeholder="0" (onClick)="submit(form.value)">{{sum}}</p-button><br>
+  <p-inputNumber placeholder="{{sum1}}" (onchange)="change($event)">  </p-inputNumber><br>
+  <p-inputNumber placeholder="{{sum1}}"></p-inputNumber><br>
+</form> -->
+
+
+<div class="card">
+  <h5>Create Proposal</h5>
+  <p-table [value]="proposal" dataKey="ID" [tableStyle]="{'min-width': '50rem'}">
+    <ng-template pTemplate="header">
+      <tr>
+        <th>YTD Number of Automations in Production</th>
+        <!-- <ng-template pTemplate="body" let-proposal let-editing="editing">
+        </ng-template> -->
+        <td>
+          <input pInputText type="text" formControlName="h1">&nbsp;
+          <input pInputText type="text" formControlName="h1">&nbsp;
+          <input pInputText type="text" formControlName="h1">&nbsp;
+          <input pInputText type="text" formControlName="h1">&nbsp;
+        </td>
+      </tr>
+      <tr>
+        <ng-template>
+          <th>Number of Development Weeks</th>
+          <td>
+            <p-inputNumber placeholder="0"></p-inputNumber>&nbsp;
+            <p-inputNumber placeholder="0"></p-inputNumber>&nbsp;
+            <p-inputNumber placeholder="0"></p-inputNumber>&nbsp;
+            <p-inputNumber placeholder="0"></p-inputNumber>&nbsp;
+          </td>
+        </ng-template>
+      </tr>
+      <tr>
+        <th>Development Cost</th>
+        <td>
+          <p-inputNumber placeholder="0"></p-inputNumber>&nbsp;
+          <p-inputNumber placeholder="0"></p-inputNumber>&nbsp;
+          <p-inputNumber placeholder="0"></p-inputNumber>&nbsp;
+          <p-inputNumber placeholder="0"></p-inputNumber>&nbsp;
+        </td>
+      </tr>
+      <tr>
+        <th>initial LicenceCost</th>
+        <td>
+          <p-inputNumber placeholder="0"></p-inputNumber>&nbsp;
+          <p-inputNumber placeholder="0"></p-inputNumber>&nbsp;
+          <p-inputNumber placeholder="0"></p-inputNumber>&nbsp;
+          <p-inputNumber placeholder="0"></p-inputNumber>&nbsp;
+        </td>
+      </tr>
+      <tr>
+        <th>Additional License Cost</th>
+        <td>
+          <p-inputNumber placeholder="0"></p-inputNumber>&nbsp;
+          <p-inputNumber placeholder="0"></p-inputNumber>&nbsp;
+          <p-inputNumber placeholder="0"></p-inputNumber>&nbsp;
+          <p-inputNumber placeholder="0"></p-inputNumber>&nbsp;
+        </td>
+      </tr>
+      <tr>
+        <th>Support Cost per month</th>
+        <td>
+          <p-inputNumber placeholder="0"></p-inputNumber>&nbsp;
+          <p-inputNumber placeholder="0"></p-inputNumber>&nbsp;
+          <p-inputNumber placeholder="0"></p-inputNumber>&nbsp;
+          <p-inputNumber placeholder="0"></p-inputNumber>&nbsp;
+        </td>
+      </tr>
+      <tr>
+        <th>Total Service Cost</th>
+        <td>
+          <p-inputNumber placeholder="0"></p-inputNumber>&nbsp;
+          <p-inputNumber placeholder="0"></p-inputNumber>&nbsp;
+          <p-inputNumber placeholder="0"></p-inputNumber>&nbsp;
+          <p-inputNumber placeholder="0"></p-inputNumber>&nbsp;
+        </td>
+      </tr>
+      <tr>
+        <th>Total License Cost</th>
+        <td>
+          <p-inputNumber placeholder="0"></p-inputNumber>&nbsp;
+          <p-inputNumber placeholder="0"></p-inputNumber>&nbsp;
+          <p-inputNumber placeholder="0"></p-inputNumber>&nbsp;
+          <p-inputNumber placeholder="0"></p-inputNumber>&nbsp;
+        </td>
+      </tr>
+      <tr>
+        <th>Total Services and License Cost</th>
+        <td>
+          <p-inputNumber placeholder="0"></p-inputNumber>&nbsp;
+          <p-inputNumber placeholder="0"></p-inputNumber>&nbsp;
+          <p-inputNumber placeholder="0"></p-inputNumber>&nbsp;
+          <p-inputNumber placeholder="0"></p-inputNumber>&nbsp;
+        </td>
+      </tr>
+    </ng-template>
+
+  </p-table>
+</div>

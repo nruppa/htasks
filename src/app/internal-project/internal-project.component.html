@@ -1,0 +1,242 @@
+<!-- <p>internal-project works!</p> -->
+<!-- <p-card>
+    <div class="grid">
+        <h4>Category</h4>
+        &nbsp;&nbsp;
+        <div class="col" *ngFor="let weekDate of weekDates ;let i=index">
+            <div style="color:Gray ;"> <p-inputNumber>{{days[i]}}</p-inputNumber>
+            </div><br>
+        </div>
+    </div> 
+</p-card>  -->
+<!-- <p-card>
+    <div class="grid">
+        <h4>Category</h4>
+        &nbsp;&nbsp;
+        <div>
+            <input pInputText type="text" formControlName="h1">&nbsp;
+            <input pInputText type="text" formControlName="h2">&nbsp;
+            <input pInputText type="text" formControlName="h3">&nbsp;
+            <input pInputText type="text" formControlName="h4">&nbsp;
+        </div><br>
+    </div>
+    
+</p-card> -->
+
+<p-card>
+    <form [formGroup]="form">
+        <p-table [value]="proposal" dataKey="ID" [tableStyle]="{'min-width': '50rem'}">
+            <ng-template pTemplate="header">
+                <tr>
+                    <th>YTD Number of Automations in Production</th>
+                    <td>
+                        <input pInputText type="text" formControlName="h1" (input)="onchange()">&nbsp;
+                        <input pInputText type="text" formControlName="h2" (input)="onchange()">&nbsp;
+                        <input pInputText type="text" formControlName="h3" (input)="onchange()">&nbsp;
+                        <input pInputText type="text" formControlName="h4" (input)="onchange()">&nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <th>Development Cost</th>
+                    <td>
+                        <input pInputText type="text" formControlName="h5" (input)="onchange()">&nbsp;
+                        <input pInputText type="text" formControlName="h6" (input)="onchange()">&nbsp;
+                        <input pInputText type="text" formControlName="h7" (input)="onchange()">&nbsp;
+                        <input pInputText type="text" formControlName="h8" (input)="onchange()">&nbsp;
+                    </td>
+                </tr>
+            </ng-template>
+        </p-table>
+        <p-button (onClick)="submit(form.value)">{{sum}}</p-button><br><br><br>
+        {{values}}
+        <input pInputText value="{{sum1}}">
+        <br>
+        <br>
+        <!-- <div *ngIf="sum1>0">
+            {{sum1}}
+        </div> -->
+    </form>
+</p-card>
+
+
+<p-table>
+    <ng-template pTemplate="header">
+        <tr>
+            <th>YTD Number of Automations in Production</th>
+        </tr>
+        <tr>
+            <th>Number of Development Weeks</th>
+        </tr>
+        <tr>
+            <th>Development Cost</th>
+        </tr>
+        <tr>
+            <th>initial LicenceCost</th>
+        </tr>
+        <tr>
+            <th>Additional License Cost</th>
+        </tr>
+        <tr>
+            <th>Support Cost per month</th>
+        </tr>
+        <tr>
+            <th>Total Service Cost</th>
+        </tr>
+        <tr>
+            <th>Total License Cost</th>
+        </tr>
+        <tr>
+            <th>Total Services and License Cost</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-data>
+        <input pInputText type="text" formControlName="h5">&nbsp;
+    </ng-template>
+</p-table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <p-table>
+    <ng-template pTemplate="header">
+        <tr>
+            <th>YTD Number of Automations in Production</th>
+            <td>
+                <input pInputText type="text" formControlName="h1">&nbsp;
+                <input pInputText type="text" formControlName="h2">&nbsp;
+                <input pInputText type="text" formControlName="h3">&nbsp;
+                <input pInputText type="text" formControlName="h4">&nbsp;
+            </td>
+        </tr>
+    </ng-template>
+    <ng-template>
+        <tr>
+            <td>
+                <input pInputText type="text" formControlName="h1">&nbsp;
+            </td>
+        </tr>
+    </ng-template>
+</p-table> -->

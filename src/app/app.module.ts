@@ -34,6 +34,10 @@ import { GuardGuard } from './guard.guard';
 import { TestService } from './test.service';
 import { RequiredDirective } from './CustomDirective/required.directive';
 import { PayrollComponent } from './payroll/payroll.component';
+import { InternalProjectComponent } from './internal-project/internal-project.component';
+import { IiiComponent } from './iii/iii.component';
+import {TableModule} from 'primeng/table';
+import { TableproductComponent } from './tableproduct/tableproduct.component';
 
 
 
@@ -48,6 +52,9 @@ import { PayrollComponent } from './payroll/payroll.component';
     TimeSheetsComponent,
     RequiredDirective,
     PayrollComponent,
+    InternalProjectComponent,
+    IiiComponent,
+    TableproductComponent,
       ],
   imports: [
     BrowserModule,
@@ -71,8 +78,8 @@ import { PayrollComponent } from './payroll/payroll.component';
     ToolbarModule,
     MenuModule, 
     PasswordModule,
-    ToggleButtonModule
-
+    ToggleButtonModule,
+    TableModule
   ],
   providers: [MessageService,ConfirmationService,GuardGuard,TestService
   ],

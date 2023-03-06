@@ -30,9 +30,7 @@ export class Save2draftComponent implements OnInit {
     'Friday',
     'Saturday',
   ]
-
   ngOnInit(): void {
-
     let data = localStorage.getItem('weekData');
     this.weekDates = data?.split(',')
     // this.test.weekDates.subscribe(x => {

@@ -11,7 +11,7 @@ import { TestService } from '../test.service';
 })
 export class LoginComponent implements OnInit {
   myform: any;
-  name = "Niharika"
+  name = "122"
   pswd = "1212"
   display: any
   value: any
